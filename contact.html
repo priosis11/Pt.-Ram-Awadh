@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact Us — Pt. Ram Awadh Bal Vidya Mandir</title>
+    <meta
+      name="description"
+      content="Address, phone, email and map for Pt. Ram Awadh Bal Vidya Mandir, Masena Mirzapur, Ramnagar, Ambedkar Nagar."
+    />
+    <meta name="theme-color" content="#c8102e" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Contact Us — Pt. Ram Awadh Bal Vidya Mandir"
+    />
+    <meta
+      property="og:description"
+      content="Get in touch with our school in Ambedkar Nagar."
+    />
+    <!-- FAVICON: browser tab icons (files are in the favicon folder) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="favicon/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="favicon/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <!-- STYLES: base = colours and fonts, components = header/footer/buttons, then page styles. Edit colours in css/base.css -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body data-page="contact">
+    <div class="layout">
+      <!-- HEADER: the menu is built by js/layout.js. To change menu links edit js/config.js (nav) -->
+      <header id="site-header"></header>
+
+      <main>
+        <!-- PAGE BANNER -->
+        <section class="page-hero">
+          <div class="container">
+            <h1>Contact Us</h1>
+            <p>
+              We are happy to answer your questions about admission and more.
+            </p>
+            <div class="page-hero__bar"></div>
+          </div>
+        </section>
+
+        <!-- CONTACT: left = address/phone/email cards + map (from js/config.js), right = message form (opens WhatsApp, see js/forms.js) -->
+        <section class="container section contact-grid">
+          <div class="contact-info" id="contact-info"></div>
+
+          <div class="form-panel">
+            <h2>Send us a message</h2>
+            <form class="form form--mt" data-form="contact" novalidate>
+              <div class="field">
+                <label for="name">Your Name</label
+                ><input
+                  class="field__control"
+                  id="name"
+                  name="name"
+                  maxlength="100"
+                />
+                <p class="field__error" data-error="name"></p>
+              </div>
+              <div class="form__row">
+                <div class="field">
+                  <label for="phone">Phone</label
+                  ><input
+                    class="field__control"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    maxlength="20"
+                  />
+                  <p class="field__error" data-error="phone"></p>
+                </div>
+                <div class="field">
+                  <label for="email">Email</label
+                  ><input
+                    class="field__control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    maxlength="255"
+                  />
+                  <p class="field__error" data-error="email"></p>
+                </div>
+              </div>
+              <div class="field">
+                <label for="message">Message</label
+                ><textarea
+                  class="field__control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                  maxlength="1000"
+                ></textarea>
+                <p class="field__error" data-error="message"></p>
+              </div>
+              <button class="form__submit" type="submit">
+                Continue to WhatsApp
+              </button>
+            </form>
+            <!-- SUCCESS MESSAGE: shown after the form is submitted (hidden until then) -->
+            <div
+              class="form-done form-done--contact"
+              data-form-done="contact"
+              hidden
+            >
+              <svg class="icon" aria-hidden="true">
+                <use href="assets/icons/sprite.svg#circle-check"></use>
+              </svg>
+              <p class="form-done__title">Your WhatsApp draft is ready.</p>
+              <p>
+                Your message has not been sent yet. Send the draft in WhatsApp
+                to contact the school.
+              </p>
+              <button type="button">Send another message</button>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: built by js/layout.js. To change address, phone or email edit js/config.js (school) -->
+      <footer id="site-footer"></footer>
+      <!-- SCRIPTS: keep this order. config.js (all content) first, then layout.js, main.js, then this page's own script -->
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+    <script src="js/forms.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog &amp; News — Pt. Ram Awadh Bal Vidya Mandir</title>
+  <meta name="description" content="Latest news, events and achievements from our school in Ambedkar Nagar.">
+  <meta name="theme-color" content="#c8102e">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Blog &amp; News — Pt. Ram Awadh Bal Vidya Mandir">
+  <meta property="og:description" content="School news, events and achievements.">
+  <!-- FAVICON: browser tab icons (files are in the favicon folder) -->
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon/favicon.ico" sizes="any">
+  <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon/favicon-32x32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="favicon/favicon-16x16.png" sizes="16x16" type="image/png">
+  <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <!-- STYLES: base = colours and fonts, components = header/footer/buttons, then page styles. Edit colours in css/base.css -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="blog">
+<div class="layout">
+  <!-- HEADER: the menu is built by js/layout.js. To change menu links edit js/config.js (nav) -->
+  <header id="site-header"></header>
+
+  <main>
+    <!-- PAGE BANNER -->
+    <section class="page-hero">
+      <div class="container">
+        <h1>Blog &amp; News</h1>
+        <p>Stories, events and achievements from our school.</p>
+        <div class="page-hero__bar"></div>
+      </div>
+    </section>
+
+    <!-- BLOG CARDS: built by js/blog.js from js/config.js (posts). Add a new post there -->
+    <section class="container section">
+      <div class="post-grid" id="post-grid"></div>
+    </section>
+  </main>
+
+  <!-- FOOTER: built by js/layout.js. To change address, phone or email edit js/config.js (school) -->
+  <footer id="site-footer"></footer>
+<!-- SCRIPTS: keep this order. config.js (all content) first, then layout.js, main.js, then this page's own script -->
+</div>
+
+<script src="js/config.js"></script>
+<script src="js/layout.js"></script>
+<script src="js/main.js"></script>
+<script src="js/blog.js"></script>
+</body>
+</html>

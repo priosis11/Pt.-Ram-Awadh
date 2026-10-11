@@ -1,0 +1,140 @@
+/* ==========================================================================
+   components.css — pieces shared by every page
+   ========================================================================== */
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  padding: 0.75rem 1.5rem; border-radius: 9999px; font-weight: 600;
+  transition: background-color 0.2s, color 0.2s, transform 0.2s;
+}
+.btn--primary { background: var(--primary); color: var(--primary-foreground); box-shadow: var(--shadow-soft); }
+.btn--primary:hover { background: var(--primary-deep); }
+.btn--outline { border: 2px solid var(--primary); color: var(--primary); }
+.btn--outline:hover { background: var(--tint); }
+.btn--ghost-light { border: 2px solid var(--primary-foreground); color: var(--primary-foreground); }
+.btn--ghost-light:hover { background: oklch(1 0 0 / 0.1); }
+.btn--white { background: var(--background); color: var(--primary); }
+.btn--white:hover { background: var(--tint); }
+.btn--block { width: 100%; }
+
+/* ---------- Logo ---------- */
+.logo { display: flex; align-items: center; gap: 0.625rem; }
+.logo__mark { width: 2.5rem; height: 2.5rem; }
+.logo__mark .shield { fill: var(--primary); }
+.logo__mark .book { fill: var(--primary-foreground); }
+.logo__mark .spine { stroke: var(--primary); stroke-width: 1.6; fill: none; }
+.logo__text { line-height: 1.25; }
+.logo__name { display: block; font-size: 0.875rem; line-height: 1.25; font-weight: 700; color: var(--foreground); }
+.logo__sub { display: block; font-size: 11px; font-weight: 500; color: var(--primary); }
+.logo--light .logo__name { color: var(--primary-foreground); }
+.logo--light .logo__sub { color: oklch(1 0 0 / 0.8); }
+.logo--light .logo__mark .shield { fill: var(--primary); }
+@media (min-width: 640px) { .logo__name { font-size: 1rem; line-height: 1.5; } }
+
+/* ---------- Header ---------- */
+.header {
+  position: sticky; top: 0; z-index: 40;
+  border-bottom: 1px solid var(--border);
+  background: var(--background);
+  box-shadow: var(--shadow-soft);
+  transition: all 0.3s;
+}
+.header--home { position: fixed; left: 0; right: 0; }
+/* transparent state: home page, top of page, mobile menu closed */
+.header.is-clear { border-color: transparent; background: transparent; box-shadow: none; color: var(--primary-foreground); }
+.header__bar { display: flex; height: var(--header-h); align-items: center; justify-content: space-between; gap: 1rem; }
+
+.nav { display: none; align-items: center; gap: 0.25rem; }
+.nav__link {
+  padding: 0.5rem 0.75rem; border-radius: var(--r-md);
+  font-size: 0.875rem; line-height: 1.25; font-weight: 500;
+  color: oklch(0.22 0.01 20 / 0.8); transition: color 0.2s;
+}
+.nav__link:hover, .nav__link.is-active { color: var(--primary); }
+.nav__cta {
+  margin-left: 0.5rem; padding: 0.5rem 1.25rem; border-radius: 9999px;
+  background: var(--primary); color: var(--primary-foreground);
+  font-size: 0.875rem; line-height: 1.25; font-weight: 600; box-shadow: var(--shadow-soft); transition: background-color 0.2s;
+}
+.nav__cta:hover { background: var(--primary-deep); }
+.is-clear .logo__name { color: var(--primary-foreground); }
+.is-clear .logo__sub { color: oklch(1 0 0 / 0.8); }
+.is-clear .nav__link, .is-clear .nav__link:hover, .is-clear .nav__link.is-active, .is-clear .menu-btn { color: var(--primary-foreground); }
+
+.menu-btn { padding: 0.5rem; border-radius: var(--r-md); color: var(--foreground); }
+.menu-btn .icon--close { display: none; }
+.menu-btn[aria-expanded="true"] .icon--open { display: none; }
+.menu-btn[aria-expanded="true"] .icon--close { display: block; }
+
+.mobile-nav { display: none; border-top: 1px solid var(--border); background: var(--background); color: var(--foreground); }
+.mobile-nav.is-open { display: block; }
+.mobile-nav .container { display: flex; flex-direction: column; padding-block: 0.75rem; }
+.mobile-nav__link { padding: 0.75rem; border-radius: var(--r-md); font-weight: 500; }
+.mobile-nav__link:hover { background: var(--tint); }
+.mobile-nav__link.is-active { color: var(--primary); background: var(--tint); }
+.mobile-nav__cta {
+  margin-top: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 9999px;
+  background: var(--primary); color: var(--primary-foreground); text-align: center; font-weight: 600;
+}
+@media (min-width: 1024px) {
+  .nav { display: flex; }
+  .menu-btn, .mobile-nav { display: none !important; }
+}
+
+/* ---------- Section headings ---------- */
+.eyebrow { margin-bottom: 0.5rem; font-size: 0.75rem; line-height: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--primary); }
+.section-title { max-width: 42rem; margin: 0 auto 2.5rem; text-align: center; }
+.section-title h2 { font-size: 1.5rem; line-height: 2rem; font-weight: 700; }
+.section-title p:not(.eyebrow) { margin-top: 0.75rem; color: var(--muted-foreground); }
+@media (min-width: 640px) { .section-title h2 { font-size: 1.875rem; line-height: 2.25rem; } }
+@media (min-width: 768px) { .section-title h2 { font-size: 2.25rem; line-height: 2.5rem; } }
+
+.heading-lg { font-size: 1.5rem; line-height: 2rem; font-weight: 700; }
+@media (min-width: 640px) { .heading-lg { font-size: 2.25rem; line-height: 2.5rem; } }
+.text-muted { color: var(--muted-foreground); }
+
+/* ---------- Inner-page banner ---------- */
+.page-hero { background: var(--tint); }
+.page-hero .container { padding-block: 3.5rem; text-align: center; }
+.page-hero h1 { font-size: 1.875rem; line-height: 2.25rem; font-weight: 700; }
+.page-hero p { max-width: 42rem; margin: 1rem auto 0; color: var(--muted-foreground); }
+.page-hero__bar { width: 4rem; height: 0.25rem; margin: 1.5rem auto 0; border-radius: 9999px; background: var(--primary); }
+@media (min-width: 640px) {
+  .page-hero .container { padding-block: 5rem; }
+  .page-hero h1 { font-size: 3rem; line-height: 1; }
+}
+
+/* ---------- Cards ---------- */
+.card { border-radius: var(--r-2xl); background: var(--card); box-shadow: var(--shadow-card); }
+.icon-box { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: var(--r-xl); background: var(--primary); color: var(--primary-foreground); }
+.photo { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--r-3xl); box-shadow: var(--shadow-card); }
+
+/* ---------- Footer ---------- */
+.footer { background: var(--primary-deep); color: var(--primary-foreground); }
+.footer__grid { display: grid; gap: 2.5rem; padding-block: 3.5rem; }
+.footer__about { margin-top: 1rem; font-size: 0.875rem; line-height: 1.25rem; color: oklch(1 0 0 / 0.8); }
+.footer h3 { margin-bottom: 1rem; font-weight: 600; }
+.footer ul { font-size: 0.875rem; line-height: 1.25rem; }
+.footer li + li { margin-top: 0.5rem; }
+.footer a { color: oklch(1 0 0 / 0.8); transition: color 0.2s; }
+.footer a:hover { color: var(--primary-foreground); }
+.footer__contacts li { display: flex; gap: 0.5rem; color: oklch(1 0 0 / 0.85); }
+.footer__contacts li + li { margin-top: 0.75rem; }
+.footer__contacts .icon { width: 1rem; height: 1rem; margin-top: 0.125rem; }
+.footer__social { display: flex; gap: 0.75rem; margin-top: 1rem; }
+.footer__social a { display: grid; place-items: center; width: 2.25rem; height: 2.25rem; border-radius: 9999px; background: oklch(1 0 0 / 0.1); color: var(--primary-foreground); transition: background-color 0.2s; }
+.footer__social a:hover { background: oklch(1 0 0 / 0.2); }
+.footer__social .icon { width: 1rem; height: 1rem; margin: 0; }
+.footer__copy { padding-block: 1.25rem; border-top: 1px solid oklch(1 0 0 / 0.15); text-align: center; font-size: 0.75rem; line-height: 1rem; color: oklch(1 0 0 / 0.75); }
+@media (min-width: 640px) { .footer__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .footer__grid { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- Floating WhatsApp button ---------- */
+.whatsapp {
+  position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 50;
+  display: grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 9999px;
+  background: var(--whatsapp); color: var(--primary-foreground); box-shadow: var(--shadow-card); transition: transform 0.2s;
+}
+.whatsapp:hover { transform: scale(1.05); }
+.whatsapp svg { width: 1.75rem; height: 1.75rem; fill: currentColor; }

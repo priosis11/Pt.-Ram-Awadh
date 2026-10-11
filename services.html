@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services & Facilities — Pt. Ram Awadh Bal Vidya Mandir</title>
+    <meta
+      name="description"
+      content="School bus for nearby villages, library, playground, science lab, computer lab and smart classes."
+    />
+    <meta name="theme-color" content="#c8102e" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Services & Facilities — Pt. Ram Awadh Bal Vidya Mandir"
+    />
+    <meta
+      property="og:description"
+      content="Bus, library, labs, playground and smart classes."
+    />
+    <!-- FAVICON: browser tab icons (files are in the favicon folder) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="favicon/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="favicon/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <!-- STYLES: base = colours and fonts, components = header/footer/buttons, then page styles. Edit colours in css/base.css -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body data-page="services">
+    <div class="layout">
+      <!-- HEADER: the menu is built by js/layout.js. To change menu links edit js/config.js (nav) -->
+      <header id="site-header"></header>
+
+      <main>
+        <!-- PAGE BANNER -->
+        <section class="page-hero">
+          <div class="container">
+            <h1>Our Services</h1>
+            <p>Facilities that support learning, safety and growth.</p>
+            <div class="page-hero__bar"></div>
+          </div>
+        </section>
+
+        <!-- SERVICE CARDS: to add a service copy one block starting with <div class=reveal> and change the icon name, title and text -->
+        <section class="container section">
+          <div class="service-grid">
+            <div class="reveal" data-delay="0">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#bus"></use>
+                  </svg>
+                </div>
+                <h3>School Bus Facility</h3>
+                <p>
+                  Safe and timely bus service covering nearby villages around
+                  Ramnagar.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="80">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#book-open"></use>
+                  </svg>
+                </div>
+                <h3>Library</h3>
+                <p>
+                  A rich library with textbooks, story books, newspapers and
+                  reference books.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="160">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#trophy"></use>
+                  </svg>
+                </div>
+                <h3>Playground</h3>
+                <p>
+                  Big open ground for cricket, kabaddi, kho-kho, athletics and
+                  more.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="0">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#flask-conical"></use>
+                  </svg>
+                </div>
+                <h3>Science Lab</h3>
+                <p>
+                  Well-equipped physics, chemistry and biology lab for practical
+                  learning.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="80">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#monitor"></use>
+                  </svg>
+                </div>
+                <h3>Computer Lab</h3>
+                <p>
+                  Modern computers to build digital skills from an early age.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="160">
+              <div class="card service">
+                <div class="service__icon">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#monitor-play"></use>
+                  </svg>
+                </div>
+                <h3>Smart Classes</h3>
+                <p>
+                  Digital boards and audio-visual lessons for easier
+                  understanding.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SCHOOL BUS photo + text -->
+        <section class="section section--tint">
+          <div class="container grid-2 service-feature">
+            <div class="reveal">
+              <img
+                class="photo"
+                src="assets/images/site/bus.jpg"
+                alt="School bus"
+                loading="lazy"
+              />
+            </div>
+            <div class="reveal" data-delay="100">
+              <h2 class="heading-sm">Safe travel, every day</h2>
+              <p>
+                Our school buses pick up and drop students from nearby villages
+                with trained drivers and attendants. Contact the school office
+                to know the route and timing for your village.
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: built by js/layout.js. To change address, phone or email edit js/config.js (school) -->
+      <footer id="site-footer"></footer>
+      <!-- SCRIPTS: keep this order. config.js (all content) first, then layout.js, main.js, then this page's own script -->
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

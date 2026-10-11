@@ -1,0 +1,104 @@
+/* ==========================================================================
+   base.css — design tokens, reset, layout helpers, animations
+   Change colours/fonts here and the whole website updates.
+   ========================================================================== */
+
+:root {
+  /* Brand colours */
+  --primary: oklch(0.53 0.21 22);
+  --primary-foreground: oklch(1 0 0);
+  --primary-deep: oklch(0.36 0.15 22);
+
+  /* Surfaces & text */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.22 0.01 20);
+  --card: oklch(1 0 0);
+  --tint: oklch(0.975 0.014 18);
+  --accent: oklch(0.95 0.03 18);
+  --muted-foreground: oklch(0.48 0.015 20);
+  --border: oklch(0.92 0.015 18);
+  --input: oklch(0.9 0.015 18);
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* School uniform + WhatsApp */
+  --uniform-white: oklch(0.99 0 0);
+  --uniform-green: oklch(0.42 0.09 155);
+  --uniform-pink: oklch(0.8 0.1 355);
+  --whatsapp: oklch(0.72 0.17 150);
+
+  /* Shape & shadow */
+  --radius: 0.9rem;
+  --r-md: calc(var(--radius) - 2px);
+  --r-lg: var(--radius);
+  --r-xl: calc(var(--radius) + 4px);
+  --r-2xl: calc(var(--radius) + 8px);
+  --r-3xl: calc(var(--radius) + 12px);
+  --shadow-soft: 0 10px 30px -12px color-mix(in oklab, var(--primary) 25%, transparent);
+  --shadow-card: 0 4px 20px -8px oklch(0.2 0 0 / 0.15);
+
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --header-h: 4rem;
+}
+
+/* ---------- Reset ---------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; border: 0 solid var(--border); }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, video, svg, iframe { display: block; max-width: 100%; }
+img, video { height: auto; }
+a { color: inherit; text-decoration: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { padding: 0; background: none; cursor: pointer; }
+ul { list-style: none; padding: 0; }
+h1, h2, h3 { font-weight: inherit; font-size: inherit; }
+
+.icon { width: 1.5rem; height: 1.5rem; flex-shrink: 0; }
+.icon--sm { width: 1rem; height: 1rem; }
+.icon--xs { width: 0.875rem; height: 0.875rem; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---------- Layout helpers ---------- */
+.container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+.container--narrow { max-width: 48rem; }
+.container--form { max-width: 42rem; }
+@media (min-width: 640px) { .container { padding-inline: 1.5rem; } }
+
+.layout { display: flex; min-height: 100vh; flex-direction: column; }
+.layout > main { flex: 1; }
+
+.section { padding-block: 4rem; }
+.section--lg { padding-block: 4rem; }
+.section--tint { background: var(--tint); }
+@media (min-width: 768px) { .section--lg { padding-block: 6rem; } }
+
+.grid-2 { display: grid; align-items: center; gap: 2.5rem; }
+@media (min-width: 1024px) { .grid-2 { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Scroll reveal (JS adds .in-view) ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.in-view { opacity: 1; transform: none; }
+
+/* ---------- Keyframes ---------- */
+@keyframes float-y { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes scroll-dot { 0% { transform: translateY(0); opacity: 1; } 100% { transform: translateY(12px); opacity: 0; } }
+@keyframes fade-up { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+@keyframes word-in { from { opacity: 0; transform: translateY(30px); filter: blur(10px); } to { opacity: 1; transform: none; filter: blur(0); } }
+@keyframes shimmer { from { left: -40%; } to { left: 120%; } }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  *, *::before, *::after { animation: none !important; }
+}

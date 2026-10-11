@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Pt. Ram Awadh Bal Vidya Mandir</title>
+    <meta
+      name="description"
+      content="Our vision, mission, Principal Priyanka’s message and our team of qualified teachers."
+    />
+    <meta name="theme-color" content="#c8102e" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="About Us — Pt. Ram Awadh Bal Vidya Mandir"
+    />
+    <meta
+      property="og:description"
+      content="Vision, mission, principal’s message and teachers."
+    />
+    <!-- FAVICON: browser tab icons (files are in the favicon folder) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="favicon/favicon.ico" sizes="any" />
+    <link rel="icon" href="favicon/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="favicon/favicon-32x32.png"
+      sizes="32x32"
+      type="image/png"
+    />
+    <link
+      rel="icon"
+      href="favicon/favicon-16x16.png"
+      sizes="16x16"
+      type="image/png"
+    />
+    <link rel="apple-touch-icon" href="favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+    />
+    <!-- STYLES: base = colours and fonts, components = header/footer/buttons, then page styles. Edit colours in css/base.css -->
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <link rel="stylesheet" href="css/pages.css" />
+  </head>
+  <body data-page="about">
+    <div class="layout">
+      <!-- HEADER: the menu is built by js/layout.js. To change menu links edit js/config.js (nav) -->
+      <header id="site-header"></header>
+
+      <main>
+        <!-- PAGE BANNER -->
+        <section class="page-hero">
+          <div class="container">
+            <h1>About Our School</h1>
+            <p>
+              A UP Board school for Classes 1 to 12 in Masena Mirzapur,
+              Ramnagar, Ambedkar Nagar.
+            </p>
+            <div class="page-hero__bar"></div>
+          </div>
+        </section>
+
+        <!-- SCHOOL INTRODUCTION: photo + welcome text. Edit the text here -->
+        <section class="container section grid-2 about-intro">
+          <div class="reveal">
+            <img
+              class="photo"
+              src="assets/images/site/hero-campus.jpg"
+              alt="School campus"
+              loading="lazy"
+            />
+          </div>
+          <div class="reveal" data-delay="100">
+            <h2 class="heading-sm">
+              Welcome to Pt. Ram Awadh Bal Vidya Mandir
+            </h2>
+            <p>
+              For years, our school has served families of Ramnagar and nearby
+              villages with quality education. Today we proudly teach 3000+
+              students with the help of 50+ qualified and experienced teachers
+              and staff.
+            </p>
+            <p>
+              We offer the best classrooms, a big and safe campus, and a school
+              bus facility so every child can learn with comfort. Many of our
+              students have gone on to achieve great success in studies and
+              careers.
+            </p>
+          </div>
+        </section>
+
+        <!-- VISION AND MISSION cards -->
+        <section class="section section--tint">
+          <div class="container vm-grid">
+            <div class="reveal">
+              <div class="card vm">
+                <div class="icon-box">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#eye"></use>
+                  </svg>
+                </div>
+                <h3>Our Vision</h3>
+                <p>
+                  To be a school where every child gains knowledge, good values
+                  and the confidence to succeed in life.
+                </p>
+              </div>
+            </div>
+            <div class="reveal" data-delay="100">
+              <div class="card vm">
+                <div class="icon-box">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="assets/icons/sprite.svg#target"></use>
+                  </svg>
+                </div>
+                <h3>Our Mission</h3>
+                <p>
+                  To provide quality, affordable education with discipline, care
+                  and modern teaching methods for all students.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRINCIPAL'S MESSAGE. PHOTO: save the principal's photo as assets/images/principal/principal.jpg (square photo looks best). Right now it is a plain white placeholder - replace the file (same name) with the real photo. Edit the message text below -->
+        <section class="container section">
+          <div class="reveal">
+            <div class="card principal">
+              <img
+                class="principal__avatar"
+                src="assets/images/principal/principal.jpg"
+                alt="Principal Priyanka"
+                width="600"
+                height="600"
+                loading="lazy"
+              />
+              <div>
+                <p class="eyebrow">Principal’s Message</p>
+                <p class="principal__quote">
+                  “Dear parents and students, our aim is to give every child a
+                  safe place to learn, grow and dream big. With dedicated
+                  teachers and your support, we will keep working for education,
+                  values and success.”
+                </p>
+                <p class="principal__name">Priyanka</p>
+                <p class="principal__role">
+                  Principal, Pt. Ram Awadh Bal Vidya Mandir
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TEACHERS: cards are created by js/pages.js from js/config.js (teachers). Edit names there. PHOTOS: add files teacher-01.jpg, teacher-02.jpg ... to assets/images/teachers/ (until then initials are shown) -->
+        <section class="section section--tint">
+          <div class="container">
+            <div class="section-title">
+              <p class="eyebrow">Our Team</p>
+              <h2>Meet Our Teachers</h2>
+              <p>50+ qualified and experienced teachers and staff.</p>
+            </div>
+            <div class="teacher-grid" id="teacher-grid"></div>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER: built by js/layout.js. To change address, phone or email edit js/config.js (school) -->
+      <footer id="site-footer"></footer>
+      <!-- SCRIPTS: keep this order. config.js (all content) first, then layout.js, main.js, then this page's own script -->
+    </div>
+
+    <script src="js/config.js"></script>
+    <script src="js/layout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/pages.js"></script>
+  </body>
+</html>
